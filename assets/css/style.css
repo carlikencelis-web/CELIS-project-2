@@ -88,6 +88,15 @@ img { display: block; width: 100%; }
 .stats-grid strong { color: var(--gold-light); font-family: "Playfair Display", serif; font-size: 38px; }
 .stats-grid span { margin-top: 7px; color: rgba(255,255,255,.68); font-size: 12px; text-transform: uppercase; letter-spacing: 1.8px; }
 
+.pillars { background: var(--cream); }
+.pillars-heading { max-width: 650px; margin-bottom: 42px; }
+.pillars-heading h2 { margin: 0; color: var(--navy); font-family: "Playfair Display", serif; font-size: clamp(40px, 4vw, 54px); line-height: 1.12; letter-spacing: -1.4px; }
+.pillars-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.pillar-card { min-height: 270px; padding: 28px 24px; background: var(--white); border-top: 3px solid var(--gold); }
+.pillar-number { color: var(--gold); font-family: "Playfair Display", serif; font-size: 18px; }
+.pillar-card h3 { margin: 34px 0 12px; color: var(--navy); font-family: "Playfair Display", serif; font-size: 22px; line-height: 1.2; }
+.pillar-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
+
 .academics { background: var(--cream); }
 .section-heading { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 45px; }
 .section-heading h2 { max-width: 600px; }
@@ -207,6 +216,9 @@ img { display: block; width: 100%; }
   .stats-grid div:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.12); }
   .stats-grid strong { font-size: 32px; }
   .stats-grid span { font-size: 10px; }
+  .pillars-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .pillar-card { min-height: 260px; padding: 23px 18px; }
+  .pillar-card h3 { margin-top: 28px; font-size: 20px; }
   .section-heading { align-items: flex-start; flex-direction: column; gap: 24px; }
   .program-grid { grid-template-columns: 1fr; }
   .program-card { min-height: 300px; }
@@ -219,4 +231,9 @@ img { display: block; width: 100%; }
   .footer-brand { grid-column: 1 / -1; }
   .footer-grid > div:nth-child(3) { display: none; }
   .footer-bottom { height: 82px; }
+}
+
+@media (max-width: 420px) {
+  .pillars-grid { grid-template-columns: 1fr; }
+  .pillar-card { min-height: 0; }
 }

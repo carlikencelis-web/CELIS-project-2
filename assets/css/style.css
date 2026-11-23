@@ -284,7 +284,16 @@ img { display: block; width: 100%; }
 .contact-mission > a { line-height: 1.7; }
 .contact-mission > a strong { color: var(--gold-light); }
 .contact-copyright { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-top: 1px solid rgba(255,255,255,.1); color: rgba(255,255,255,.62); font-size: 11px; }
-.faculty-avatar { width: 72px; height: 72px; display: grid; place-items: center; border-radius: 50%; background: var(--navy); color: var(--gold-light); font-family: "Playfair Display", serif; font-size: 20px; }
+.faculty-avatar { width: 72px; height: 72px; display: grid; place-items: center; border-radius: 50%; background: var(--navy); color: var(--gold-light); font-family: "Playfair Display", serif; font-size: 20px; animation: profile-avatar-load .7s cubic-bezier(.2,.8,.2,1) both; }
+.faculty-grid article:nth-child(2) .faculty-avatar { animation-delay: .12s; }
+.faculty-grid article:nth-child(3) .faculty-avatar { animation-delay: .24s; }
+@keyframes profile-avatar-load {
+  from { opacity: 0; transform: scale(.78) translateY(12px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .faculty-avatar { animation: none; }
+}
 
 @media (max-width: 980px) {
   .menu-toggle { width: 44px; height: 44px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; border: 1px solid rgba(255,255,255,.35); background: transparent; cursor: pointer; }
